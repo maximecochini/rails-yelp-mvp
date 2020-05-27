@@ -12,6 +12,11 @@
 @import "components/index";
 @import "pages/index";
 
+body {
+  position: relative;
+  min-height:100vh;
+}
+
 // Navbar
 nav img {
   height: 2em;
@@ -19,6 +24,9 @@ nav img {
 
 // Footer position
 footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
   background-color: rgb(30,30,30);
   color: white;
 }
@@ -71,6 +79,9 @@ i {
 }
 
 // Reviews list
+.reviews {
+  padding-bottom:200px;
+}
 .review {
   background-color: #F2F2F2;
   border-radius: 8px;
@@ -82,4 +93,20 @@ i {
   &:hover {
     color: #C12020;
   }
+}
+
+// Stars in Restaurant Show
+.index-stars {
+  font-size: 12px;
+}
+.stars {
+  font-size: 24px;
+  color: #C12020;
+}
+
+// Tags
+.restaurant-tag {
+  font-weight: bold;
+  color: #C12020;
+  margin-right: 5px
 }
