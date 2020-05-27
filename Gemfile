@@ -27,7 +27,7 @@ gem 'bootsnap', '>= 1.4.2', require: false
 
 # Front End Le Wagon Guide
 gem 'autoprefixer-rails'
-gem 'font-awesome-sass', '~> 5.6.1'
+gem 'font-awesome-sass', '~> 5.12.0'
 gem 'simple_form'
 
 # Faker

@@ -1,0 +1,43 @@
+<h1><%= @restaurant.name %></h1>
+
+<div class="container">
+  <div>
+    <span class="big-badge badge badge-pill badge-primary mr-4"><%= @restaurant.category %></span>
+    <span class="mr-4"><i class="fas fa-map-marker-alt"></i> <%= @restaurant.address %></span>
+    <a href="tel:<%= @restaurant.phone_number %>" class="font-weight-bold"><i class="fas fa-phone"></i> <%= @restaurant.phone_number %></a>
+  </div>
+</div>
+
+<div class="container d-flex align-items-center justify-content-between my-4">
+  <%= link_to restaurants_path, class: "btn btn-sm btn-secondary" do %>
+    <i class="fas fa-caret-left"></i> Back
+  <% end %>
+  <div>
+    <%= link_to edit_restaurant_path, class: "btn btn-sm btn-outline-secondary" do %>
+      <i class="fas fa-tools"></i> Edit this restaurant
+    <% end %>
+    <%= link_to restaurant_path(@restaurant), class: "btn btn-sm btn-outline-primary", method: :delete, data: { confirm: "Are you sure?" } do %>
+      <i class="fas fa-trash"></i> Delete this restaurant
+    <% end %>
+  </div>
+</div>
+
+<div class="container mt-4">
+  <h2><%= @restaurant.reviews.count %> reviews</h2>
+  
+  <% @restaurant.reviews.each do |review| %>
+    <div class="review">
+      <p><% review.rating.times do %><i class="fas fa-star"></i><% end %></p>
+      <p><%= review.content %></p>
+      <div class="container d-flex align-items-center justify-content-end">
+        <%= link_to edit_review_path(review), class: "mr-4" do %>
+          <i class="fas fa-pencil-alt"></i> Edit this review
+        <% end %>
+        <%= link_to review_path(review), class: "", method: :delete, data: { confirm: "Are you sure?" } do %>
+          <i class="fas fa-eraser"></i> Delete this review
+        <% end %>
+      </div>
+    </div>
+  <% end %>
+  
+</div>

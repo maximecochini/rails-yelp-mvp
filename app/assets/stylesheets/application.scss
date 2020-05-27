@@ -11,3 +11,75 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+// Navbar
+nav img {
+  height: 2em;
+}
+
+// Footer position
+footer {
+  background-color: rgb(30,30,30);
+  color: white;
+}
+
+h1 {
+  font-weight: bolder;
+}
+
+h2 {
+  font-weight: bold;
+}
+
+i {
+  font-size: .9em;
+  margin-right: 5px;
+}
+
+.btn {
+  font-weight: bold;
+}
+
+.big-badge {
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+// List with badges style
+.list-group p {
+  margin-bottom: 0;
+}
+.list-group-item {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+  &:first-child {
+    border-top-left-radius: .25rem;
+    border-top-right-radius: .25rem;
+  }
+  &:last-child {
+    border-bottom-left-radius: .25rem;
+    border-bottom-right-radius: .25rem;
+  }
+}
+
+// Restaurants list
+.restaurant-list p {
+  font-weight: bold;
+}
+.restaurant-list p span {
+  font-weight: normal;
+  opacity: .7;
+}
+
+// Reviews list
+.review {
+  background-color: #F2F2F2;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 8px;
+}
+.review a {
+  color: #808080;
+  &:hover {
+    color: #C12020;
+  }
+}

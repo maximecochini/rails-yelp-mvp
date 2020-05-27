@@ -1,0 +1,5 @@
+<h1>Edit <%= @restaurant.name %></h1>
+
+<%= render "form", restaurant: @restaurant %>
+
+<%= link_to "<- Back", restaurants_path, class: "btn btn-secondary col-2 mt-4" %>
